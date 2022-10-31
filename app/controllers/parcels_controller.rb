@@ -10,6 +10,7 @@ class ParcelsController < ApplicationController
 
   # GET /parcels/1
   def show
+    @user = Parcel.find_by(id: params[:id])
     render json: @parcel
   end
 
